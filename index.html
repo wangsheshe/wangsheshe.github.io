@@ -5,23 +5,43 @@
 		<title></title>
 	</head>
 	<body>
-		<a href="page2.html">页面2</a>
-		<button onclick="red()">红色</button>
-		<button onclick="blue(event)">蓝色</button>
 	</body>
-	<script type="text/javascript" src="jquery.min.js"></script>
-	<script type="text/javascript" src="jquery.cookie.js"></script>
 	<script type="text/javascript">
-		function red(){
-			sessionStorage.setItem("color","red");
-			console.log(sessionStorage)
+		var str="abcdefgabddefrabb"
+		
+		//+表示一位或多位，*表示0次或是多次。
+		//正则表达式小括号表示子表达式，使用exec进行
+		//搜索时 子表达式的内容也会返回来。
+		var reg=/ab([a-z])/g;
+		//var reg=/ab[a-z]/g;
+		var a1=reg.exec(str);
+		console.log(a1);
+		var a2=reg.exec(str);
+		console.log(a2);
+		//正则表达式在使用exec搜索字符串的时候如果知道g就是全局搜索。
+		//下次在执行时候会从下一个位置匹配。直到最后一个时候，搜索的时候会返回
+		//null。         
+
+		var arr;
+		//使用while循环配合exec可以找出字符串里面符合要求的数据。
+		while (arr=reg.exec(str)){
+			console.log(arr)
 		}
-		function blue(){
-			sessionStorage.setItem("color","blue");
-			console.log(sessionStorage)
-		}
-		function red(){
-			sessionStorage.setItem("color","red");
-		}
+		//exec表达式搜索返回值是一个数组，数组的第一个字符串是整体匹配结果
+		//第二个开始是子表达式匹配的结果。
+		var str="bbaaaaaadhkzjdxhfsjzdhjd"
+		var reg=/aa[a-z]/g
+		aa=reg.exec(str)
+		//alert(aa)
+		var str=["1","h","hi","o","p"] ;
+		var ao=str.splice(2,1,"孙化育")
+		alert(str)
+		alert(ao)
+		var ss=[1,2,3,]
+		console.log(ss.reverse())
+		var str1="abcdgsdgsa";
+		console.log(str1.split("."))
+		//基本例行是值得赋值；
+		//对象是的赋值是引用。
 	</script>
 </html>
