@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				height: 300px;
+				width: 300px;
+				border: 1px solid green;
+				background-color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="change">
+
+		</div>
+
+	</body>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.cookie.js"></script>
+	<script type="text/javascript">
+		setInterval(function() {
+			var div=document.getElementById("change");
+			var color=sessionStorage.getItem("color");
+			div.style.backgroundColor=color;
+			
+
+		}, 100)
+	</script>
+
+</html>

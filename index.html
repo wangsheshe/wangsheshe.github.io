@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="page2.html">页面2</a>
+		<button onclick="red()">红色</button>
+		<button onclick="blue(event)">蓝色</button>
+	</body>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.cookie.js"></script>
+	<script type="text/javascript">
+		function red(){
+			sessionStorage.setItem("color","red");
+			console.log(sessionStorage)
+		}
+		function blue(){
+			sessionStorage.setItem("color","blue");
+			console.log(sessionStorage)
+		}
+		function red(){
+			sessionStorage.setItem("color","red");
+		}
+	</script>
+</html>
